@@ -1,3 +1,6 @@
+import warnings
+warnings.filterwarnings("ignore")
+
 import requests
 from parser import parse_page_html
 
