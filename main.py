@@ -6,6 +6,10 @@ from concurrent.futures import ProcessPoolExecutor
 import requests
 from fetcher import fetch_and_parse
 from analytics import compute_catalog_stats
+from typing import optional
+
+import warnings
+warnings.filterwarnings("ignore")
 
 def get_live_gbp_to_usd_rate() -> float:
     """Fetches real-time GBP to USD exchange rate from API with fallback."""
@@ -29,7 +33,7 @@ def usage(exit_code: int = 0):
     print("  -h          Display this help message and exit")
     sys.exit(exit_code)
 
-def parse_cli_args(args: list[str]) -> tuple[int | None, int]:
+def parse_cli_args(args: list[str]) -> tuple[Optional[int], int]:
     cores = None
     pages = 20
 
