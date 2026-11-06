@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+import os
+os.environ["PYTHONWARNINGS"] = "ignore"
+
 import sys
 import time
 from functools import partial
@@ -7,9 +10,6 @@ import requests
 from fetcher import fetch_and_parse
 from analytics import compute_catalog_stats
 from typing import Optional
-
-import warnings
-warnings.filterwarnings("ignore")
 
 def get_live_gbp_to_usd_rate() -> float:
     """Fetches real-time GBP to USD exchange rate from API with fallback."""
