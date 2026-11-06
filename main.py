@@ -2,6 +2,9 @@
 import os
 os.environ["PYTHONWARNINGS"] = "ignore"
 
+import warnings
+warnings.filterwarnings("ignore")
+
 import sys
 import time
 from functools import partial
