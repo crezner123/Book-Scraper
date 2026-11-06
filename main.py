@@ -6,7 +6,7 @@ from concurrent.futures import ProcessPoolExecutor
 import requests
 from fetcher import fetch_and_parse
 from analytics import compute_catalog_stats
-from typing import optional
+from typing import Optional
 
 import warnings
 warnings.filterwarnings("ignore")
